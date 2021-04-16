@@ -8,7 +8,7 @@ html,body {
 }
 
 .Modal-backdrop {
-    display: flex;
+    display: none; /* Display flex if open */
     justify-content: center;
     align-items: center;
     background: #5050504a;
