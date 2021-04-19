@@ -1,24 +1,24 @@
 /* Modal Core Functionality */
 
 (function () {
-    let modalStatus = sessionStorage.getItem('toggleModal');
     const ModalContainer = document.querySelector("#Modal-backdrop");
     const ModalCloseButton = document.querySelector("#Modal-close");
+    letcloseModal = sessionStorage.getItem('closeModal');
 
     const initModal = () => {
-        if(!modalStatus) {
-            toggleModal();
+        if(!closeModal) {
+            ModalContainer.style.display = 'flex';
         }
     }
 
-    const toggleModal = () => {
-        let openModal = !modalStatus;
-        ModalContainer.style.display = openModal ? 'flex' : 'none';
-        sessionStorage.setItem('toggleModal', modalStatus);
+    const toggleCloseModal = () => {
+      sessionStorage.setItem('closeModal', true);
+      closeModal = sessionStorage.getItem('closeModal');
+      ModalContainer.style.display = closeModal ? 'none' : 'flex';
 
-        return modalStatus = !modalStatus;
+      return closeModal;
     }
 
-    ModalCloseButton.addEventListener("click", toggleModal);
+    ModalCloseButton.addEventListener("click", toggleCloseModal);
     window.onload = initModal;
 })();

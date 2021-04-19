@@ -1,0 +1,65 @@
+.Modal-backdrop {
+  display: none; /* Display flex if open */
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  background: #ffffffa1;
+  z-index: 999999;
+}
+
+.Modal {
+  position: relative;
+  background: white;
+  border: solid 1px #383420;
+  padding: 3em;
+  text-align: center;
+}
+
+.Modal-close {
+  position: absolute;
+  top: 0;
+  right:0;
+  border: solid 1px #383420;
+  background: #383420;
+  color: white;
+  padding: 4px;
+  font-size: 48px;
+  line-height: 0.7;
+  outline: 0;
+}
+
+.Modal-header,
+.Modal-footer {
+  width: 100%;
+  height: 0;
+}
+
+.Modal-social-icons {
+  height: 30px;
+  width: 30px;
+}
+
+.Modal .newsletter-content {
+	width: 100%;
+    margin: auto;
+}
+
+.Modal .newsletter-content form {
+    display: flex;
+}
+
+.Modal .newsletter-content form input[type="email"] {
+    margin: 0;
+}
+
+.Modal h1 {
+   	margin-bottom: 20px;
+}
+
+.Modal hr {
+  	margin: 15px;
+}

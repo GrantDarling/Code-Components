@@ -1,0 +1,37 @@
+{
+    "name": {
+        "en": "Modal"
+    },
+    "settings": [
+        {
+        "type": "header",
+        "content": {
+            "en": "Settings"
+        }
+        },
+        {
+        "type": "text",
+        "id": "launch_date",
+        "label": {
+            "en": "Launch Date"
+        },
+        "info": {
+            "en": "April 28th @ 2pm EST\/1pm CST\/ 11am PST"
+        }
+        },
+        {
+        "type": "header",
+        "content": {
+            "en": "Toggle Modal"
+        }
+        },
+        {
+        "type": "checkbox",
+        "id": "show_modal",
+        "label": {
+            "en": "Show Modal"
+        }
+        }
+    ]
+}
+  

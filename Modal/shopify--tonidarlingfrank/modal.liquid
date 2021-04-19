@@ -1,0 +1,28 @@
+  <section id="Modal-backdrop" class="Modal-backdrop">
+    <div class="Modal">
+      <div class="Modal-header">
+        <button id="Modal-close" class="Modal-close">×</button>
+      </div>
+      <div class="Modal-body">
+        {% if settings.launch_date != blank %}
+            <h1>Next Product Drop</h1>
+	        <p>{{ settings.launch_date }}</p>
+        	<p>Get on the list to be notified of the next drop date</p>
+        {% else %}
+            <h1>Never Miss An Update!</h1>
+        	<p>Small ceramics go fast!</p>
+            <p>Please subscribe to be notified of the next drop date.</p>
+        {% endif %}
+		<div class="newsletter-content">
+        	{% render 'newsletter-form' %}
+		</div>
+        <hr class="">
+        <p>Follow along with my progress</p>
+        <a target="_blank" href="https://www.instagram.com/tonidarlingfrankk/"><img class="Modal-social-icons" src="https://cdn.shopify.com/s/files/1/0530/5679/8919/files/tonidarlingfrank-instagram.svg?v=1618622772" /></a>
+        <a target="_blank" href="https://www.tiktok.com/@tonidarlingfrank?"><img class="Modal-social-icons" src="https://cdn.shopify.com/s/files/1/0530/5679/8919/files/tonidarlingfrank-tik-tok.svg?v=1618622851" /></a>
+      </div>
+      <div class="Modal-footer">
+          
+      </div>
+    </div>
+  </section>
