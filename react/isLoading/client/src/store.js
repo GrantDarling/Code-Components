@@ -1,10 +1,10 @@
 import { composeWithDevTools } from 'redux-devtools-extension'
-import loadingReducer from "./reducers/isLoading";
+import loadingReducer from "./reducers/loader";
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 
 const reducer = combineReducers({
-  isLoading: loadingReducer,
+  loader: loadingReducer,
 })
 
 export default createStore(

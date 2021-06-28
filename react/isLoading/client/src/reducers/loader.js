@@ -1,11 +1,14 @@
-const initialState = true
+const initialState = {
+	isLoading: true,
+	refresh: 2000
+}
 
 const reducer = (state = initialState, action) => {
   switch(action.type) {
       case 'INIT':
-        return action.data
+        return action.payload
       case 'LOADING':
-        return action.data
+        return { ...state, isLoading: action.payload }
       default:
         return state
     }
@@ -13,22 +16,22 @@ const reducer = (state = initialState, action) => {
 
 export const initialize = (content) => {
   return async dispatch => {
-    const data = content
+    const payload = content
     dispatch({
       'type': 'INIT',
-      data,
+      payload,
     })
   }
 }
 
 export const loading = (content) => {
   return async dispatch => {
-    const data = content
+    const payload = content
     dispatch({
       'type': 'LOADING',
-      data
+      payload
     })
-    return data
+    return payload
   }
 }
 
